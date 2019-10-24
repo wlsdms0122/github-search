@@ -32,6 +32,10 @@
 		F3AD98EF236181E400025979 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98EE236181E400025979 /* NetworkService.swift */; };
 		F3AD98F12361820B00025979 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98F02361820B00025979 /* Logger.swift */; };
 		F3AD98F4236182EA00025979 /* JSONCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98F3236182EA00025979 /* JSONCodec.swift */; };
+		F3AD98F7236183FC00025979 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98F6236183FC00025979 /* AppCoordinator.swift */; };
+		F3AD98F92361846400025979 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98F82361846400025979 /* RootViewController.swift */; };
+		F3AD98FB2361847600025979 /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98FA2361847600025979 /* MainViewReactor.swift */; };
+		F3AD98FD236185B800025979 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98FC236185B800025979 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		F3AD98EE236181E400025979 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		F3AD98F02361820B00025979 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F3AD98F3236182EA00025979 /* JSONCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodec.swift; sourceTree = "<group>"; };
+		F3AD98F6236183FC00025979 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F3AD98F82361846400025979 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F3AD98FA2361847600025979 /* MainViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
+		F3AD98FC236185B800025979 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				F3AD98A92361647D00025979 /* AppDelegate.swift */,
+				F3AD98F6236183FC00025979 /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -152,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				F3AD98AD2361647D00025979 /* MainViewController.swift */,
+				F3AD98FC236185B800025979 /* MainView.swift */,
+				F3AD98FA2361847600025979 /* MainViewReactor.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				F3AD98C0236166C500025979 /* App */,
+				F3AD98F5236183E500025979 /* Root */,
 				F3AD98C1236166CD00025979 /* Main */,
 			);
 			path = Module;
@@ -236,6 +248,14 @@
 				F3AD98F3236182EA00025979 /* JSONCodec.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		F3AD98F5236183E500025979 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				F3AD98F82361846400025979 /* RootViewController.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,14 +360,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3AD98FB2361847600025979 /* MainViewReactor.swift in Sources */,
 				F3AD98F4236182EA00025979 /* JSONCodec.swift in Sources */,
 				F3AD98EF236181E400025979 /* NetworkService.swift in Sources */,
 				F3AD98AE2361647D00025979 /* MainViewController.swift in Sources */,
 				F3AD98DF23617FBA00025979 /* Primitive+adjust.swift in Sources */,
 				F3AD98DD23617FA800025979 /* NSObject.name.swift in Sources */,
+				F3AD98F92361846400025979 /* RootViewController.swift in Sources */,
 				F3AD98EB236181A600025979 /* ServiceProvider.swift in Sources */,
+				F3AD98F7236183FC00025979 /* AppCoordinator.swift in Sources */,
 				F3AD98E323617FDB00025979 /* UIView+autolayout.swift in Sources */,
 				F3AD98E123617FC700025979 /* UIColor+hex.swift in Sources */,
+				F3AD98FD236185B800025979 /* MainView.swift in Sources */,
 				F3AD98F12361820B00025979 /* Logger.swift in Sources */,
 				F3AD98AA2361647D00025979 /* AppDelegate.swift in Sources */,
 				F3AD98E523617FF400025979 /* UIViewController+rx.swift in Sources */,
