@@ -37,11 +37,11 @@ class MainView: UIView {
                 make.top.equalToSuperview().inset(64).inset(10.adjust())
             }
             make.leading.equalToSuperview().inset(10.adjust())
-            make.trailing.equalToSuperview().inset(10.adjust())
+            make.trailing.equalToSuperview().inset(10.adjust()).priorityHigh()
         }
         
         usersTableView.snp.makeConstraints { make in
-            make.top.equalTo(usernameSearchTextField.snp.bottom).offset(10.adjust())
+            make.top.equalTo(usernameSearchTextField.snp.bottom).offset(10.adjust()).priorityHigh()
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             if #available(iOS 11.0, *) {
