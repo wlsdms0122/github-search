@@ -6,9 +6,8 @@
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build
+github_search/Carthage/Checkouts
+github_search/Carthage/Build
 
 ### Xcode ###
 # Xcode
