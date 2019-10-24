@@ -21,6 +21,13 @@ enum Constants {
         }
     }()
     
+    enum Font {
+        static let light: UIFont = UIFont.systemFont(ofSize: 17.0, weight: .light)
+        static let regular: UIFont = UIFont.systemFont(ofSize: 17.0, weight: .regular)
+        static let bold: UIFont = UIFont.systemFont(ofSize: 17.0, weight: .bold)
+        static let extraBold: UIFont = UIFont.systemFont(ofSize: 17.0, weight: .heavy)
+    }
+    
     enum Color {
         static let clear: UIColor = .clear
         
