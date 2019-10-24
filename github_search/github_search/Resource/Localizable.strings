@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  github_search
+
+  Created by JSilver on 2019/10/24.
+  Copyright © 2019 JSilver. All rights reserved.
+*/
+
+"main_navigation_title" = "Github Users";
+"user_public_repository_format" = "Number of repos: %d";
