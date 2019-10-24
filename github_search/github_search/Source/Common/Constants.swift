@@ -46,5 +46,13 @@ enum Constants {
                 return UIColor(hex: "#000000")
             }
         }()
+        
+        static let gray: UIColor = {
+            if #available(iOS 11.0, *) {
+                return UIColor(named: "gray")!
+            } else {
+                return UIColor(hex: "#666666")
+            }
+        }()
     }
 }
