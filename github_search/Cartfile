@@ -1,0 +1,15 @@
+# Rx
+github "ReactiveX/RxSwift" ~> 5.0
+github "RxSwiftCommunity/RxDataSources" ~> 4.0
+
+# SnapKit
+github "SnapKit/SnapKit" ~> 4.0
+
+# ReactorKit
+github "ReactorKit/ReactorKit"
+
+# Alamofire
+github "Alamofire/Alamofire" "5.0.0-rc.2"
+
+# Kingfisher
+github "onevcat/Kingfisher" ~> 5.0
