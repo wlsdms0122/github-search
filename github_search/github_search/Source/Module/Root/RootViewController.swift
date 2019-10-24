@@ -12,5 +12,9 @@ class RootViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationBar.titleTextAttributes = [
+            .font: Constants.Font.bold
+        ]
     }
 }

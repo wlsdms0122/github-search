@@ -26,7 +26,7 @@ class MainViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "main_navigation_title".localized
     }
     
     // MARK: - bind
