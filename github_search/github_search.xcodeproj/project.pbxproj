@@ -21,6 +21,12 @@
 		F3AD98D523617C5100025979 /* ReactorKitRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AD98CB23617C5100025979 /* ReactorKitRuntime.framework */; };
 		F3AD98D623617C5100025979 /* ReactorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AD98CC23617C5100025979 /* ReactorKit.framework */; };
 		F3AD98D723617C5100025979 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3AD98CD23617C5100025979 /* RxSwift.framework */; };
+		F3AD98DA23617F4900025979 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98D923617F4900025979 /* Constants.swift */; };
+		F3AD98DD23617FA800025979 /* NSObject.name.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98DC23617FA800025979 /* NSObject.name.swift */; };
+		F3AD98DF23617FBA00025979 /* Primitive+adjust.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98DE23617FBA00025979 /* Primitive+adjust.swift */; };
+		F3AD98E123617FC700025979 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98E023617FC700025979 /* UIColor+hex.swift */; };
+		F3AD98E323617FDB00025979 /* UIView+autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98E223617FDB00025979 /* UIView+autolayout.swift */; };
+		F3AD98E523617FF400025979 /* UIViewController+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AD98E423617FF400025979 /* UIViewController+rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		F3AD98CB23617C5100025979 /* ReactorKitRuntime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKitRuntime.framework; path = Carthage/Build/iOS/ReactorKitRuntime.framework; sourceTree = "<group>"; };
 		F3AD98CC23617C5100025979 /* ReactorKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactorKit.framework; path = Carthage/Build/iOS/ReactorKit.framework; sourceTree = "<group>"; };
 		F3AD98CD23617C5100025979 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F3AD98D923617F4900025979 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F3AD98DC23617FA800025979 /* NSObject.name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.name.swift; sourceTree = "<group>"; };
+		F3AD98DE23617FBA00025979 /* Primitive+adjust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Primitive+adjust.swift"; sourceTree = "<group>"; };
+		F3AD98E023617FC700025979 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		F3AD98E223617FDB00025979 /* UIView+autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+autolayout.swift"; sourceTree = "<group>"; };
+		F3AD98E423617FF400025979 /* UIViewController+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,8 @@
 		F3AD98BE236164BB00025979 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F3AD98D823617F3B00025979 /* Common */,
+				F3AD98DB23617F4F00025979 /* Extension */,
 				F3AD98C0236166C500025979 /* App */,
 				F3AD98C1236166CD00025979 /* Main */,
 			);
@@ -147,6 +161,26 @@
 				F3AD98C623617C5100025979 /* SnapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3AD98D823617F3B00025979 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F3AD98D923617F4900025979 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F3AD98DB23617F4F00025979 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F3AD98DC23617FA800025979 /* NSObject.name.swift */,
+				F3AD98DE23617FBA00025979 /* Primitive+adjust.swift */,
+				F3AD98E023617FC700025979 /* UIColor+hex.swift */,
+				F3AD98E223617FDB00025979 /* UIView+autolayout.swift */,
+				F3AD98E423617FF400025979 /* UIViewController+rx.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +286,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3AD98AE2361647D00025979 /* MainViewController.swift in Sources */,
+				F3AD98DF23617FBA00025979 /* Primitive+adjust.swift in Sources */,
+				F3AD98DD23617FA800025979 /* NSObject.name.swift in Sources */,
+				F3AD98E323617FDB00025979 /* UIView+autolayout.swift in Sources */,
+				F3AD98E123617FC700025979 /* UIColor+hex.swift in Sources */,
 				F3AD98AA2361647D00025979 /* AppDelegate.swift in Sources */,
+				F3AD98E523617FF400025979 /* UIViewController+rx.swift in Sources */,
+				F3AD98DA23617F4900025979 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
