@@ -17,8 +17,60 @@ class MainView: UIView {
         return view
     }()
     
-    let usersTableView: UITableView = {
+    let userTableView: UITableView = {
         let view = UITableView()
+        return view
+    }()
+    
+    let loadingIndicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(frame: CGRect(origin: .zero, size: CGSize(width: 0, height: 80)))
+        view.startAnimating()
+        return view
+    }()
+    
+    let emptyLabel: UILabel = {
+        let view = UILabel()
+        view.textAlignment = .center
+        view.font = Constants.Font.regular.withSize(20.adjust())
+        view.numberOfLines = 0
+        view.text = "search_result_empty_title".localized
+        return view
+    }()
+    
+    private let errorTitleLabel: UILabel = {
+        let view = UILabel()
+        view.textAlignment = .center
+        view.font = Constants.Font.regular.withSize(20.adjust())
+        view.numberOfLines = 0
+        view.text = "search_result_error_title".localized
+        return view
+    }()
+    
+    let errorDescriptionLabel: UILabel = {
+        let view = UILabel()
+        view.textAlignment = .center
+        view.font = Constants.Font.regular.withSize(17.adjust())
+        view.textColor = Constants.Color.gray
+        view.numberOfLines = 0
+        return view
+    }()
+    
+    private lazy var errorStackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [errorTitleLabel, errorDescriptionLabel])
+        view.axis = .vertical
+        view.spacing = 5.adjust()
+        return view
+    }()
+    
+    lazy var errorView: UIView = {
+        let view = UIView()
+        
+        // Autolayout 제약조건 설정
+        view.addAutolayoutSubview(errorStackView)
+        errorStackView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        
         return view
     }()
     
@@ -29,7 +81,8 @@ class MainView: UIView {
         super.init(frame: frame)
         backgroundColor = Constants.Color.white
         
-        addAutolayoutSubviews([usernameSearchTextField, usersTableView])
+        // Autolayout 제약조건 설정
+        addAutolayoutSubviews([usernameSearchTextField, userTableView])
         usernameSearchTextField.snp.makeConstraints { make in
             if #available(iOS 11.0, *) {
                 make.top.equalTo(safeAreaLayoutGuide).inset(10.adjust())
@@ -40,7 +93,7 @@ class MainView: UIView {
             make.trailing.equalToSuperview().inset(10.adjust()).priorityHigh()
         }
         
-        usersTableView.snp.makeConstraints { make in
+        userTableView.snp.makeConstraints { make in
             make.top.equalTo(usernameSearchTextField.snp.bottom).offset(10.adjust()).priorityHigh()
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
@@ -54,5 +107,13 @@ class MainView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - lifecycle
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        emptyLabel.frame = userTableView.bounds
+        errorView.frame = userTableView.bounds
     }
 }
