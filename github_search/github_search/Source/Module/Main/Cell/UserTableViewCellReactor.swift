@@ -33,7 +33,13 @@ class UserTableViewCellReactor: Reactor {
     var initialState: State
     
     // MARK: - constructor
-    init() {
-        initialState = State(avatarUrl: "stub", userId: "stub", publicRepositoryCount: 0)
+    init?(user: User) {
+        guard let avatarUrl = user.avatarUrl,
+            let id = user.id,
+            let publicRepositoryCount = user.publicRepositoryCount else { return nil }
+        
+        initialState = State(avatarUrl: avatarUrl,
+                             userId: id,
+                             publicRepositoryCount: publicRepositoryCount)
     }
 }

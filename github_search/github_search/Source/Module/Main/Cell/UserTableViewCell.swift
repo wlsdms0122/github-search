@@ -10,11 +10,13 @@ import UIKit
 import ReactorKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
-class UserTableViewCell: UITableViewCell, View {
+class UserTableViewCell: UITableViewCell, ReactorKit.View {
     // MARK: - view properties
     let avatarImageView: UIImageView = {
         let view = UIImageView()
+        view.layer.masksToBounds = true
         return view
     }()
     
@@ -26,7 +28,7 @@ class UserTableViewCell: UITableViewCell, View {
     
     let publicRepositoryLabel: UILabel = {
         let view = UILabel()
-        view.font = Constants.Font.regular.withSize(15.adjust())
+        view.font = Constants.Font.regular.withSize(12.adjust())
         view.textColor = Constants.Color.gray
         return view
     }()
@@ -79,8 +81,13 @@ class UserTableViewCell: UITableViewCell, View {
     func bind(reactor: UserTableViewCellReactor) {
         // MARK: action
         // MARK: state
-        
-        // TODO: avatar image load
+        // 사용자 아바타
+        reactor.state
+            .map { $0.avatarUrl }
+            .distinctUntilChanged()
+            .compactMap { URL(string: $0) }
+            .subscribe(onNext: { [weak self] in self?.avatarImageView.kf.setImage(with: $0) })
+            .disposed(by: disposeBag)
         
         // 사용자 ID
         reactor.state
@@ -96,5 +103,10 @@ class UserTableViewCell: UITableViewCell, View {
             .map { String(format: "user_public_repository_format".localized, $0) }
             .bind(to: publicRepositoryLabel.rx.text)
             .disposed(by: disposeBag)
+    }
+    
+    override func prepareForReuse() {
+        // 이미지 다운로드가 진행중인 경우 재사용되기 전에 Task 취소
+        avatarImageView.kf.cancelDownloadTask()
     }
 }
