@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  RootViewController.swift
 //  github_search
 //
 //  Created by JSilver on 2019/10/24.
@@ -8,10 +8,13 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class RootViewController: UINavigationController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        navigationBar.titleTextAttributes = [
+            .font: Constants.Font.bold
+        ]
     }
 }
-

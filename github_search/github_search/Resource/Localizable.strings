@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  github_search
+
+  Created by JSilver on 2019/10/24.
+  Copyright © 2019 JSilver. All rights reserved.
+*/
+
+// MARK: - Screen title
+"main_navigation_title" = "Github Users";
+
+// MARK: - User info
+"user_public_repository_format" = "Number of repos: %d";
+
+// MARK: - Search user
+"search_result_empty_title" = "No result!\nTry to search different.";
+"search_result_error_title" = "Oops!\nSomething went wrong";
+"search_error_whitespace_title" = "Try to search different except whitespace";
+
+// MARK: - Network error description
+"network_error_url_not_correct_title" = "Request URL is wrong";
+"netrowk_error_empty_data_title" = "Response data is empty";
+"network_error_parse_error" = "Response data format is wrong";

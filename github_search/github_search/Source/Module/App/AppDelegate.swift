@@ -11,15 +11,16 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    private let serviceProvider: ServiceProviderProtocol = ServiceProvider()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Window 생성
         let window = UIWindow(frame: UIScreen.main.bounds)
-        // Root view controller 및 Key window 지정
-        window.rootViewController = MainViewController()
-        window.makeKeyAndVisible()
-        
         self.window = window
+        
+        // App coordinator 생성 후 root view controller 전환
+        let coordinator = AppCoordinator(provider: serviceProvider, window: window)
+        coordinator.present(for: .main)
         return true
     }
 }
